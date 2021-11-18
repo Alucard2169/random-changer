@@ -69,4 +69,4 @@ console.log(_cN)
 
 let r = () => randCol(color);
 
-document.getElementById('change-me').addEventListener("click", r)
+document.getElementById('change-me').addEventListener("click", r);
