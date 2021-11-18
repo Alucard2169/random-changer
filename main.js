@@ -12,11 +12,12 @@ let color = [
 let point;
 let _cC;
 let _cN;
+
 let randCol = (pack) => {
 
     point = Math.floor(Math.random() * pack.length);
+
     _cC = document.body.style.background = pack[point];
-    document.getElementById("cN").innerHTML = _cN;
     switch(_cC){
         case "#E27D60":
         _cN = ' Terracotta';
@@ -55,9 +56,13 @@ let randCol = (pack) => {
         break;
 
         default:
-            _cN = "black";
+            _cN = " black";
         break;
     }
+    document.getElementById("cN").innerHTML = _cN;
+console.log(_cC);
+console.log(_cN)
+
 
     document.getElementById('change-me').style.background = pack[point];
 }
