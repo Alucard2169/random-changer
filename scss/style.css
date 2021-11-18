@@ -39,6 +39,17 @@ h1 {
   font-weight: 500;
 }
 
+#cN {
+  border: 1px red solid;
+  padding: .5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  background: red;
+  position: relative;
+  overflow: hidden;
+}
+
 .animate {
   margin-top: 2rem;
   background-color: black;
