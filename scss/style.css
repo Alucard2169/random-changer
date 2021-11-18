@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;500&display=swap");
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body {
+  background: black;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.animate {
+  margin-top: 2rem;
+  background-color: black;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.animate::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background: conic-gradient(from 55deg, #D83F87, #D83F87 60deg, #2A1B3D 60deg, #2A1B3D 120deg, #44318D 120deg, #44318D 180deg, #FAED26 180deg, #FAED26 240deg, #F79E02 240deg, #F79E02 300deg, #0074E1 300deg, #0074E1 360deg);
+  -webkit-animation: spin 10s infinite linear;
+          animation: spin 10s infinite linear;
+}
+
+button {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Lobster", cursive;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=style.css.map */
