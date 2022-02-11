@@ -1,34 +1,32 @@
-color = [
-    "#8EE4AF",
-    "#5CDB95",
-    "#3500D3",
-    "#C38D9E",
-    "#41B3A3",
-    "#F64C72",
-    "#8D8741",
-    "#05386B",
-    "#FC4445",
-    "#3FEEE6",
-    "#C3073F",
-];
 
+const changerButton = document.getElementById("changer");
 
-
-function random_selector(list){
-    const RANDOM = Math.floor(Math.random() * list.length);
-    return list[RANDOM];
-}
-
-function background(theme){
-    let current_color  = random_selector(theme);
-    document.body.style.backgroundColor = current_color;
-    document.getElementById("color").innerHTML = current_color;
-    document.getElementById("color").style.background = current_color;
+changerButton.addEventListener('click', function () {
+    changeColor();
     
+})
+
+
+function changeColor() {
+   let  color1 = Math.floor(Math.random() * 256);
+   let  color2 = Math.floor(Math.random() * 256);
+   let color3 = Math.floor(Math.random() * 256);
+    let color = `rgb(${color1},${color2},${color3})`;
+
+
+    document.body.style.backgroundColor = color;
+    document.getElementById("color").style.background = color;
+    rgbToHex(color1,color2,color3);
+
 }
 
-let a = () => background(color);
 
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
 
-
-let changerButton = document.getElementById("changer").addEventListener('click', a);
+function rgbToHex(color1, color2, color3) {
+    let current_color = "#" + componentToHex(color1) + componentToHex(color2) + componentToHex(color3);
+    document.getElementById("color").innerHTML = current_color;
+}
